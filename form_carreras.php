@@ -1,4 +1,4 @@
-<?php
+<<?php
 include("bd_conect.php");
 ?>
 
@@ -14,6 +14,20 @@ include("bd_conect.php");
 </form>
 </body>
 </html>
+<?php
+$name=$_POST['nombre'];
+$clave=$_POST['clave'];
+//hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
+$consulta = "INSERT INTO carreras(nombres,claves) VALUES ('$name','$clave')";
+$resultado = mysqli_query($conex,$consulta);
+	if ($resultado) {
+	    ?> 
+	    <h3 class="ok">¡Te has inscripto correctamente!</h3>
+        <?php
+	} else {
+	    ?> 
+	    <h3 class="bad">¡Ups ha ocurrido un error!</h3>
+        <?php
+	}
 
-
-
+?>
