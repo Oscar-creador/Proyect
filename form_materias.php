@@ -1,3 +1,8 @@
+
+<?php
+include("bd_conect.php");
+?>
+
 <html>
 <body>
 <h3>Materias</h3>
@@ -10,6 +15,11 @@
 </form>
 </body>
 </html>
+<?php
+$clave=$_POST('clave');
+$nombre=$_POST('nombre');
+$sql=INSERT INTO `carreras`(`nombres`, `claves`) VALUES ([value-1],[value-2])
 
+?>
 
 

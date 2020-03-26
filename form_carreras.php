@@ -1,3 +1,7 @@
+<?php
+include("bd_conect.php");
+?>
+
 <html>
 <body>
 <h3>Carreras</h3>

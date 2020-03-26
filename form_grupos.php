@@ -1,3 +1,8 @@
+<?php
+include("bd_conect.php");
+?>
+
+</html>
 <body>
     <h3>Grupos</h3>
     <form action="" method="POST">
@@ -7,8 +12,8 @@
     <input name="nombre" type="text"><br>
     <input type="submit" value="Enviar">
     </form>
-    </body>
-    </html>
+</body>
+</html>
     
     
     
