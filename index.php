@@ -45,6 +45,18 @@ a:hover, a:active {
 <a href="form_grupos.php">Control de Grupos<br> </a> 
 
 <a href="form_materias.php">Control de Materias<br> </a> 
+<br>
+<br>
+
+<a href="FormALUMNOS.php">Lista Alumnos <br> </a> 
+
+<a href="listacarreras.php">Lista Carreras<br> </a> 
+
+<a href="FormALUMNOS.php">Lista Maestros<br> </a> 
+
+<a href="FormALUMNOS.php">Listas Grupos<br> </a> 
+
+<a href="FormALUMNOS.php">Listas de Materias<br> </a> 
 
 </center>
 
