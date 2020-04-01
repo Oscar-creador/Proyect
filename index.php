@@ -48,15 +48,15 @@ a:hover, a:active {
 <br>
 <br>
 
-<a href="FormALUMNOS.php">Lista Alumnos <br> </a> 
+<a href="">Lista Alumnos <br> </a> 
 
 <a href="listacarreras.php">Lista Carreras<br> </a> 
 
-<a href="FormALUMNOS.php">Lista Maestros<br> </a> 
+<a href="">Lista Maestros<br> </a> 
 
-<a href="FormALUMNOS.php">Listas Grupos<br> </a> 
+<a href="listagrupos.php">Listas Grupos<br> </a> 
 
-<a href="FormALUMNOS.php">Listas de Materias<br> </a> 
+<a href="listamaterias.php">Listas de Materias<br> </a> 
 
 </center>
 
