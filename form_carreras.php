@@ -24,15 +24,15 @@ include("bd_conect.php");
               </div>
               <!-- /.card-header -->
               <!-- Nombre, clave. -->
-              <form role="form">
+              <form action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="nombre">Nombre: </label>
+                    <label>Nombre:</label>
                     <input type="text" class="form-control" name="nombre">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="clave">Clave: </label>
+                    <label >Clave: </label>
                     <input type="number" class="form-control" name="clave">
                   </div>
 				  </div>
@@ -42,7 +42,7 @@ include("bd_conect.php");
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Subir</button>
+                  <button type="submit"  name="submit" class="btn btn-primary">Subir</button>
                 </div>
               </form>
             </div>
@@ -51,17 +51,16 @@ include("bd_conect.php");
         </body>
         </html>
 <?php
-$name=$_POST['nombre'];
-$clave=$_POST['clave'];
-    if(isset($name,$clave)){
-        //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
-        $consulta = "INSERT INTO carreras(nombres,claves) VALUES ('$name','$clave')";
-        $resultado = mysqli_query($conex,$consulta);
-	if ($resultado) {
-	    echo"Guardado";
-	} else {
-	    echo"No guardado";
-	    }
-	}
+if(isset($_POST['submit'])){
+  $name=$_POST['nombre'];
+  $clave=$_POST['clave'];
+  //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
+  $consulta = "INSERT INTO carreras(nombres,claves) VALUES ('$name','$clave')";
+  $resultado = mysqli_query($conex,$consulta);
+if ($resultado) {
+echo"Guardado";
+} else {
+echo"No guardado";
+}
+}
 ?>   
-    
