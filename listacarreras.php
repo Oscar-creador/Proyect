@@ -6,19 +6,22 @@
 
 
 <!DOCTYPE html>
-<html>
-<head>
-	<title>mostrar datos</title>
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dando estilo a las tablas</title>
+        <link rel="stylesheet" href="tabla.css">
+    </head>
 <body>
-
 <br>
-
+<div id="main-container">
 	<table border="1" >
-		<tr>
+		<thead>
 			<td>Nombre</td>
 			<td>Clave</td>
-		</tr>
+			<td>Modificar</td>
+			<td>Eliminar</td>
+		</thead>
 
 		<?php 
 		$sql="SELECT * from carreras";
@@ -30,11 +33,13 @@
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
 			<td><?php echo $mostrar['claves'] ?></td>
+			<td><a href="">Modificar</a></td>
+			<td><a href="">Eliminar</a></td>
 		</tr>
 	<?php 
 	}
 	 ?>
 	</table>
-
+</div>
 </body>
 </html>

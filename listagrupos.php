@@ -19,7 +19,8 @@
 		<thead>
 			<td>Nombre</td>
             <td>Clave</td>
-            <td>Editar</td>
+			<td>Modificar</td>
+			<td>Eliminar
         </thead>
 
 		<?php 
@@ -32,7 +33,8 @@
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
             <td><?php echo $mostrar['grupos'] ?></td>
-            <td>Hola</td>
+			<td><a href="">Modificar</a></td>
+			<td><a href="">Eliminar</a></td>
 		</tr>
 	<?php 
 	}
