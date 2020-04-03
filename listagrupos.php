@@ -24,8 +24,8 @@
         </thead>
 
 		<?php 
-		$sql="SELECT * from grupos";
-		$result=mysqli_query($conexion,$sql);
+	
+		$result=mysqli_query($conexion,"SELECT * from grupos");
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
@@ -33,7 +33,7 @@
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
             <td><?php echo $mostrar['grupos'] ?></td>
-			<td><a href="">Modificar</a></td>
+			<td><a href="editarGRUPOS.php?id=<?php echo urlencode($mostrar['id']);?> ">Modificar</a></td>
 			<td><a href="">Eliminar</a></td>
 		</tr>
 	<?php 

@@ -23,7 +23,7 @@ include("bd_conect.php");
                 <h3 class="card-title">Formulario Grupos</h3>
               </div>
               <!-- /.card-header -->
-              <!-- Nombre, clave. -->
+              <!-- Nombre, num de grupo. -->
               <form action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
@@ -53,9 +53,9 @@ include("bd_conect.php");
 <?php
 if(isset($_POST['submit'])){
   $name=$_POST['nombre'];
-  $clave=$_POST['numgpo'];
+  $grupo=$_POST['numgpo'];
   //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
-  $consulta = "INSERT INTO grupos(nombres,grupos) VALUES ('$name','$clave')";
+  $consulta = "INSERT INTO grupos(nombres,grupos) VALUES ('$name','$grupo')";
   $resultado = mysqli_query($conex,$consulta);
 if ($resultado) {
 echo"Guardado";
