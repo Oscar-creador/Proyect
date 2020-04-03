@@ -25,7 +25,7 @@ include("bd_conect.php");
               </div>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
-              <form role="form">
+              <form role="form" action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label >No. de Empleado: </label>
@@ -44,7 +44,7 @@ include("bd_conect.php");
                   <p></p>
                   <div class="form-group">
                     <label >Telefono: </label>
-                    <input type="tel" class="form-control" name="telefonomaestro"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <input type="tel" class="form-control" name="telefonomaestro"  >
                   </div>
                   </div>
                   <p></p>
@@ -52,7 +52,7 @@ include("bd_conect.php");
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" name="submit" class="btn btn-primary">Subir</button>
+                  <button type="submit"  name="submit" class="btn btn-primary">Subir</button>
                 </div>
               </form>
             </div>
@@ -78,4 +78,6 @@ $resultado = mysqli_query($conex,$consulta);
 	    echo "Error";
   }
 }
+?>
+
 ?>
