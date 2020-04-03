@@ -7,23 +7,27 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Tabla de Datos</title>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+    <link rel="stylesheet" href="tabla.css">
 </head>
 <body>
 <br>
+<div id="main-container">
 	<table border="1" >
-		<tr>
+		<thead>
 			<td>No. de Empleado</td>
 			<td>Nombre</td>
             <td>Correo</td>
-            <td>Telefono</td>
-		</tr>
+			<td>Telefono</td>
+			<td>Modificar</td>
+			<td>Eliminar</td>
+		</thead>
 
 		<?php 
-		$sql="SELECT * from alumnos";
-		$result=mysqli_query($conexion,$sql);
+		$result=mysqli_query($conexion,"SELECT * from maestros");
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
@@ -32,7 +36,9 @@
 			<td><?php echo $mostrar['numempleado'] ?></td>
 			<td><?php echo $mostrar['nombremaestro'] ?></td>
             <td><?php echo $mostrar['correomaestro'] ?></td>
-            <td><?php echo $mostrar['telefonomaestro'] ?></td>
+			<td><?php echo $mostrar['telefonomaestro'] ?></td>
+			<td><a href="editarMAESTROS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
+			<td><a href="">Eliminar</a></td>
 		</tr>
 	<?php 
 	}

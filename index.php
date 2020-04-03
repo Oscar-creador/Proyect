@@ -40,7 +40,7 @@ a:hover, a:active {
 
 <a href="form_carreras.php">Control de Carreras<br> </a> 
 
-<a href="ForMAESTROS.php">Control de Maestros<br> </a> 
+<a href="FormMAESTROS.php">Control de Maestros<br> </a> 
 
 <a href="form_grupos.php">Control de Grupos<br> </a> 
 
@@ -48,11 +48,11 @@ a:hover, a:active {
 <br>
 <br>
 
-<a href="">Lista Alumnos <br> </a> 
+<a href="listaalumnos.php">Lista Alumnos <br> </a> 
 
 <a href="listacarreras.php">Lista Carreras<br> </a> 
 
-<a href="">Lista Maestros<br> </a> 
+<a href="listamaestros">Lista Maestros<br> </a> 
 
 <a href="listagrupos.php">Listas Grupos<br> </a> 
 

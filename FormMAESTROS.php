@@ -7,7 +7,7 @@ include("bd_conect.php");
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Formulario - Maestros</title>
+  <title>Formulario -Maestros</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -21,30 +21,30 @@ include("bd_conect.php");
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Formulario Maestros</h3>
+                <h3 class="card-title">Formulario - Maestros</h3>
               </div>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
               <form role="form">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="numempleado">No. de Empleado: </label>
-                    <input type="number" class="form-control" id="numempleado">
+                    <label >No. de Empleado: </label>
+                    <input type="number" class="form-control" name="numempleado">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="nombremaestro">Nombre: </label>
-                    <input type="text" class="form-control" id="nombremaestro">
+                    <label >Nombre: </label>
+                    <input type="text" class="form-control" name="nombremaestro">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="correomaestro">Correo: </label>
-                    <input type="email" class="form-control" id="correomaestro">
+                    <label >Correo: </label>
+                    <input type="email" class="form-control" name="correomaestro">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="telefonomaestro">Telefono: </label>
-                    <input type="tel" class="form-control" id="telefonomaestro"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <label >Telefono: </label>
+                    <input type="tel" class="form-control" name="telefonomaestro"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                   </div>
                   </div>
                   <p></p>
@@ -52,7 +52,7 @@ include("bd_conect.php");
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Subir</button>
+                  <button type="submit" name="submit" class="btn btn-primary">Subir</button>
                 </div>
               </form>
             </div>
@@ -63,6 +63,7 @@ include("bd_conect.php");
         </html>
 
 <?php
+if(isset($_POST['submit'])){
 $numempleado=$_POST['numempleado'];    
 $nombremaestro=$_POST['nombremaestro'];
 $correomaestro=$_POST['correomaestro'];
@@ -72,13 +73,9 @@ $consulta = "INSERT INTO maestros(numempleado,nombremaestro,correomaestro,telefo
 '$nombremaestro','$correomaestro','$telefonomaestro')";
 $resultado = mysqli_query($conex,$consulta);
 	if ($resultado) {
-	    ?> 
-	    <h3 class="ok">¡Te has inscripto correctamente!</h3>
-        <?php
+	    echo"Guardado";
 	} else {
-	    ?> 
-	    <h3 class="bad">¡Ups ha ocurrido un error!</h3>
-        <?php
-	}
-
+	    echo "Error";
+  }
+}
 ?>
