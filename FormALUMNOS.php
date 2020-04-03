@@ -25,26 +25,26 @@ include("bd_conect.php");
               </div>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
-              <form role="form">
+              <form role="form" action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="matricula">Matricula: </label>
-                    <input type="number" class="form-control" id="matricula">
+                    <label >Matricula: </label>
+                    <input type="number" class="form-control" name="matricula">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="nombrealumno">Nombre: </label>
-                    <input type="text" class="form-control" id="nombrealumno">
+                    <label >Nombre: </label>
+                    <input type="text" class="form-control" name="nombrealumno">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="correoalumno">Correo: </label>
-                    <input type="email" class="form-control" id="correoalumno">
+                    <label >Correo: </label>
+                    <input type="email" class="form-control" name="correoalumno">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label for="telefonoalumno">Telefono: </label>
-                    <input type="tel" class="form-control" id="telefonoalumno"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <label >Telefono: </label>
+                    <input type="tel" class="form-control" name="telefonoalumno"  >
                   </div>
                   </div>
                   <p></p>
@@ -52,7 +52,7 @@ include("bd_conect.php");
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Subir</button>
+                  <button type="submit" name="submit" class="btn btn-primary">Subir</button>
                 </div>
               </form>
             </div>
@@ -62,22 +62,18 @@ include("bd_conect.php");
         </html>
 
 <?php
+if(isset($_POST['submit'])){
 $matricula=$_POST['matricula'];    
 $nombrealumno=$_POST['nombrealumno'];
 $correoalumno=$_POST['correoalumno'];
 $telefonoalumno=$_POST['telefonoalumno'];
-
 $consulta = "INSERT INTO alumnos(matricula,nombrealumno,correoalumno,telefonoalumno) VALUES ('$matricula',
 '$nombrealumno','$correoalumno','$telefonoalumno')";
 $resultado = mysqli_query($conex,$consulta);
 	if ($resultado) {
-	    ?> 
-	    <h3 class="ok">¡Te has inscripto correctamente!</h3>
-        <?php
+	    echo "Guardado";
 	} else {
-	    ?> 
-	    <h3 class="bad">¡Ups ha ocurrido un error!</h3>
-        <?php
+	    echo "Error";
 	}
-
+}
 ?>
