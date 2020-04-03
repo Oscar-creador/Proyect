@@ -34,7 +34,7 @@
 			<td><?php echo $mostrar['nombres'] ?></td>
             <td><?php echo $mostrar['grupos'] ?></td>
 			<td><a href="editarGRUPOS.php?id=<?php echo urlencode($mostrar['id']);?> ">Modificar</a></td>
-			<td><a href="">Eliminar</a></td>
+			<td><a href="eliminarGRUPOS.php?id=<?php echo urlencode($mostrar['id']);?>">Eliminar</a></td>
 		</tr>
 	<?php 
 	}

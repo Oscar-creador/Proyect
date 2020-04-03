@@ -38,7 +38,7 @@ $conexion=mysqli_connect('localhost','root','','proyecto');
 		<td><?php echo $mostrar['correoalumno'] ?></td>
 		<td><?php echo $mostrar['telefonoalumno'] ?></td>
 		<td><a href="editarALUMNOS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
-		<td><?php echo $mostrar['telefonoalumno'] ?></td>
+		<td><a href="eliminarALUMNOS.php?id=<?php echo urlencode($mostrar['id']);?>">Eliminar</a></td>
 	</tr>
 <?php 
 }

@@ -38,7 +38,7 @@
             <td><?php echo $mostrar['correomaestro'] ?></td>
 			<td><?php echo $mostrar['telefonomaestro'] ?></td>
 			<td><a href="editarMAESTROS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
-			<td><a href="">Eliminar</a></td>
+			<td><a href="eliminarMAESTROS.php?id=<?php echo urlencode($mostrar['id']);?>">Eliminar</a></td>
 		</tr>
 	<?php 
 	}

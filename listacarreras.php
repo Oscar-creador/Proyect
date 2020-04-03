@@ -34,7 +34,7 @@
 			<td><?php echo $mostrar['nombres'] ?></td>
 			<td><?php echo $mostrar['claves'] ?></td>
 			<td><a href="editarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
-			<td><img src="fonfo.jpg"></td>
+			<td><a href="eliminarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>">Eliminar</a></td>
 		</tr>
 	<?php 
 	}
