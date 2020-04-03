@@ -9,7 +9,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Dando estilo a las tablas</title>
+        <title>Lista</title>
         <link rel="stylesheet" href="tabla.css">
     </head>
 <body>

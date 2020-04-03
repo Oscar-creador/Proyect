@@ -9,7 +9,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Dando estilo a las tablas</title>
+        <title>Lista</title>
         <link rel="stylesheet" href="tabla.css">
     </head>
 <body>
@@ -34,7 +34,7 @@
 			<td><?php echo $mostrar['nombres'] ?></td>
 			<td><?php echo $mostrar['claves'] ?></td>
 			<td><a href="">Modificar</a></td>
-			<td><a href="">Eliminar</a></td>
+			<td><img src="fonfo.jpg"></td>
 		</tr>
 	<?php 
 	}

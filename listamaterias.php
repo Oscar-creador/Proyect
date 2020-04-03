@@ -9,7 +9,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Dando estilo a las tablas</title>
+        <title>Listas</title>
         <link rel="stylesheet" href="tabla.css">
     </head>
 <body>
@@ -24,8 +24,8 @@
         </thead>
 
 		<?php 
-		$sql="SELECT * from materias";
-		$result=mysqli_query($conexion,$sql);
+		
+		$result=mysqli_query($conexion,"SELECT * from materias");
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
@@ -33,7 +33,7 @@
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
             <td><?php echo $mostrar['claves'] ?></td>
-			<td><a href="">Modificar</a></td>
+			<td><a href="editarcategoria.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
 			<td><a href="">Eliminar</a></td>
 		</tr>
 	<?php 
