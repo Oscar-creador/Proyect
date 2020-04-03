@@ -1,12 +1,17 @@
 <?php
-include("bd_conect.php");
+$id_categoria=$_GET['id'];
+require 'bd_conect.php';
+$buscar=mysqli_query($conex,"SELECT*FROM carreras WHERE id='$id_categoria'");
+$fila=mysqli_fetch_array($buscar);
+$nombres=$fila['nombres'];
+$claves=$fila['claves'];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Formulario carreras</title>
+  <title>Formulario editar carreras</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -20,20 +25,25 @@ include("bd_conect.php");
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Formulario Carreras</h3>
+                <h3 class="card-title">Formulario editar carreras</h3>
               </div>
               <!-- /.card-header -->
               <!-- Nombre, clave. -->
-              <form action="" method="POST">
+              <form action="modificarCARRERAS.php" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label>Nombre:</label>
-                    <input type="text" class="form-control" name="nombre">
+                    <input type="text" class="form-control" name="nombre" value="<?php echo $nombres?>">
+                  </div>
+                  <p></p>
+                  <div class="form-group">
+                    <label></label>
+                    <input type="hidden" class="form-control" name="id_categoria" value="<?php echo $id_categoria;?>">
                   </div>
                   <p></p>
                   <div class="form-group">
                     <label >Clave: </label>
-                    <input type="number" class="form-control" name="clave">
+                    <input type="number" class="form-control" name="clave" value="<?php echo $claves;?>">
                   </div>
 				  </div>
 				  <p></p>
@@ -42,7 +52,7 @@ include("bd_conect.php");
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit"  name="submit" class="btn btn-primary">Subir</button>
+                  <button type="submit"  name="submit" class="btn btn-primary">Modificar</button>
                 </div>
               </form>
             </div>
@@ -50,17 +60,3 @@ include("bd_conect.php");
 
         </body>
         </html>
-<?php
-if(isset($_POST['submit'])){
-  $name=$_POST['nombre'];
-  $clave=$_POST['clave'];
-  //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
-  $consulta = "INSERT INTO carreras(nombres,claves) VALUES ('$name','$clave')";
-  $resultado = mysqli_query($conex,$consulta);
-if ($resultado) {
-echo"Guardado";
-} else {
-echo"No guardado";
-}
-}
-?>   

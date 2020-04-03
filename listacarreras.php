@@ -24,8 +24,8 @@
 		</thead>
 
 		<?php 
-		$sql="SELECT * from carreras";
-		$result=mysqli_query($conexion,$sql);
+		
+		$result=mysqli_query($conexion,"SELECT * from carreras");
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
@@ -33,7 +33,7 @@
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
 			<td><?php echo $mostrar['claves'] ?></td>
-			<td><a href="">Modificar</a></td>
+			<td><a href="editarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
 			<td><img src="fonfo.jpg"></td>
 		</tr>
 	<?php 
