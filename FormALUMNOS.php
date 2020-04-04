@@ -10,8 +10,31 @@ include("bd_conect.php");
   <title>Formulario - Alumnos</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"href="../../plugins/fontawesome-free/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+
 <body>
+
+<style>
+body {
+  background-image: url('fondo.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+</style> 
+
+
+
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -58,6 +81,8 @@ include("bd_conect.php");
             </div>
             <!-- /.card -->
 
+
+            
         </body>
         </html>
 
