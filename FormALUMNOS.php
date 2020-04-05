@@ -194,7 +194,7 @@ body {
     <div class="wrapper">
       
       <header class="main-header">
-        <a href="../../index.php" class="logo"><b>Control</b>UPV</a>
+        <a href="../Proyect-master/index.php" class="logo"><b>Control</b>UPV</a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
