@@ -185,12 +185,29 @@ body {
 .skin-blue.layout-top-nav .main-header > .logo:hover {
   background: #3b8ab8;
 }
+
+
 </style>
 </style> 
 
-
-
-
+<body class="skin-blue">
+    <div class="wrapper">
+      
+      <header class="main-header">
+        <a href="../../index.php" class="logo"><b>Control</b>UPV</a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+            </ul>
+          </div>
+        </nav>
+        </header>
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -200,39 +217,44 @@ body {
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Formulario Alumnos</h3>
+                <center> 
+              <h3 style="color:white;">Formulario Alumnos</h3>
               </div>
+</center>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
               <form role="form" action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
-                    <label >Matricula: </label>
-                    <input type="number" class="form-control" name="matricula">
+                  <label style="color:white;">Matricula: </label> 
+                  <input type="number" class="form-control" name="matricula">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label >Nombre: </label>
+                  <label style="color:white;">Nombre: </label>
+  
                     <input type="text" class="form-control" name="nombrealumno">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label >Correo: </label>
+                  <label style="color:white;">Correo:   </label>
                     <input type="email" class="form-control" name="correoalumno">
                   </div>
                   <p></p>
                   <div class="form-group">
-                    <label >Telefono: </label>
+                  <label style="color:white;">Telefono: </label>
                     <input type="tel" class="form-control" name="telefonoalumno"  >
                   </div>
                   </div>
                   <p></p>
                 </div>
                 <!-- /.card-body -->
-
+                <center>
                 <div class="card-footer">
-                  <button type="submit" name="submit" class="btn btn-primary">Subir</button>
+                
+                  <button style="color:white;" type="submit" name="submit" class="btn btn-primary">Subir</button>
                 </div>
+</center>
               </form>
             </div>
             <!-- /.card -->
