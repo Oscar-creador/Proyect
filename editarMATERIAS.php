@@ -14,6 +14,19 @@ $claves=$fila['claves'];
   <title>Formulario editar materias</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"href="../../plugins/fontawesome-free/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="2AdminLTE.min.css">
+
+
 </head>
 <body>
     <!-- Main content -->
@@ -46,18 +59,16 @@ $claves=$fila['claves'];
                     <label >Nombre: </label>
                     <input type="text" class="form-control" name="nombre" value="<?php echo $nombres;?>">
                   </div>
-				  </div>
-				  <p></p>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
+                  <!-- /.card-body -->
+                  <div class="card-footer">
                   <button type="submit"  name="submit" class="btn btn-primary">Modificar</button>
+                </div>
+                <!-- /.card -->
+				       </div>
+				       <p></p>
+                  </div>
                 </div>
               </form>
             </div>
-            <!-- /.card -->
-
         </body>
         </html>

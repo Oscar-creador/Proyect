@@ -19,6 +19,19 @@ $telefonoalumno=$fila['telefonoalumno'];
   <!-- Tell the browser to be responsive to screen width -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"href="../../plugins/fontawesome-free/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="2AdminLTE.min.css">
+
+
 </head>
 <body>
     <!-- Main content -->
@@ -60,17 +73,18 @@ $telefonoalumno=$fila['telefonoalumno'];
                     <label >Telefono: </label>
                     <input type="tel" class="form-control" name="telefonoalumno" value="<?php echo $telefonoalumno;?>" >
                   </div>
+                  <!-- /.card-body -->
+                  <div class="card-footer">
+                  <button type="submit" name="submit" class="btn btn-primary">Modificar</button>
+                </div>
+                <!-- /.card -->
                   </div>
                   <p></p>
                 </div>
-                <!-- /.card-body -->
+               
 
-                <div class="card-footer">
-                  <button type="submit" name="submit" class="btn btn-primary">Modificar</button>
-                </div>
               </form>
             </div>
-            <!-- /.card -->
 
         </body>
         </html>
