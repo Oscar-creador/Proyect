@@ -239,7 +239,7 @@ body {
 		<tr>
 			<td><?php echo $mostrar['nombres'] ?></td>
 			<td><?php echo $mostrar['claves'] ?></td>
-			<td><a href="editarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>">Modificar</a></td>
+			<td><a href="editarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>"><img src="https://i.ibb.co/KN50dsp/edicionado.jpg" alt="edicionado" border="0"></a></td>
 			<td><a href="eliminarCARRERAS.php?id=<?php echo urlencode($mostrar['id']);?>"><img src="https://i.ibb.co/VB3Rhf1/DELETEXD.jpg" alt="DELETEXD" border="0"></a></a></td>
 		</tr>
 	<?php 

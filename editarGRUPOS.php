@@ -57,9 +57,11 @@ $grupos=$fila['grupos'];
                     <label >Numero de grupo: </label>
                     <input type="number" class="form-control" name="numgpo" value="<?php echo $grupos;?>">
                   </div>
+                  <center>
                   <div class="card-footer">
                   <button type="submit"  name="submit" class="btn btn-primary">Modificar</button>
                 </div>
+                </center>
 				          </div>
 				          <p></p>
                   </div>

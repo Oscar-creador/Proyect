@@ -58,10 +58,12 @@ $claves=$fila['claves'];
                     <label >Clave: </label>
                     <input type="number" class="form-control" name="clave" value="<?php echo $claves;?>">
                   </div>
-				          </div>
+                  </div>
+                  <center>
                   <div class="card-footer">
                   <button type="submit"  name="submit" class="btn btn-primary">Modificar</button>
                 </div>
+                </center>
 				          <p></p>
                   </div>
                 

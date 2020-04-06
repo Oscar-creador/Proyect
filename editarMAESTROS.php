@@ -72,9 +72,11 @@ $telefonomaestro=$fila['telefonomaestro'];
                     <input type="tel" class="form-control" name="telefonomaestro"  value="<?php echo $telefonomaestro;?>" >
                   </div>
                   <!-- /.card-body -->
+                  <center>
                   <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Modificar</button>
                 </div>
+                </center>
                  <!-- /.card -->
                   </div>
                   </div>
