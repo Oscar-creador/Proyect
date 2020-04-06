@@ -25,7 +25,7 @@ include("bd_conect.php");
 </head>
 
 <body>
-
+<!--Aqui comienzan los estilos-->
 <style>
 <style>
 /*
@@ -189,12 +189,14 @@ body {
 
 </style>
 </style> 
+<!--Aqui acaban los estilos-->
+<!--Aqui comienza el navbar-->
 
 <body class="skin-blue">
     <div class="wrapper">
       
       <header class="main-header">
-        <a href="../Proyect-master/index.php" class="logo"><b>Control</b>UPV</a>
+        <a href="index.php" class="logo"><b>Control</b>UPV</a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -208,6 +210,8 @@ body {
           </div>
         </nav>
         </header>
+        <!--Aqui termina el navbar-->
+        <!--Aqui comienza el formulario-->
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -220,9 +224,10 @@ body {
                 <center> 
               <h3 style="color:white;">Formulario Alumnos</h3>
               </div>
-</center>
+                </center>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
+              <center>
               <form role="form" action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
@@ -249,12 +254,13 @@ body {
                   <p></p>
                 </div>
                 <!-- /.card-body -->
+                </center>
                 <center>
                 <div class="card-footer">
                 
                   <button style="color:white;" type="submit" name="submit" class="btn btn-primary">Subir</button>
                 </div>
-</center>
+                </center>
               </form>
             </div>
             <!-- /.card -->
@@ -263,7 +269,8 @@ body {
             
         </body>
         </html>
-
+        <!--Aqui termina el formulario-->
+<!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
 if(isset($_POST['submit'])){
 $matricula=$_POST['matricula'];    
@@ -274,9 +281,10 @@ $consulta = "INSERT INTO alumnos(matricula,nombrealumno,correoalumno,telefonoalu
 '$nombrealumno','$correoalumno','$telefonoalumno')";
 $resultado = mysqli_query($conex,$consulta);
 	if ($resultado) {
-	    echo "Guardado";
+	    echo "";
 	} else {
 	    echo "Error";
 	}
 }
 ?>
+<!--Aqui termina la insercion de datos a la base-->

@@ -24,7 +24,7 @@ include("bd_conect.php");
 
 </head>
 <body>
-
+<!--Aqui comienzan los estilos-->
 <style>
 <style>
 /*
@@ -186,12 +186,13 @@ body {
 }
 
 </style>
-
+<!--Aqui acaban los estilos-->
+<!--Aqui comienza el navbar-->
 <body class="skin-blue">
     <div class="wrapper">
       
       <header class="main-header">
-        <a href="../Proyect-master/index.php" class="logo"><b>Control</b>UPV</a>
+        <a href="index.php" class="logo"><b>Control</b>UPV</a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -205,7 +206,8 @@ body {
           </div>
         </nav>
         </header>
-
+        <!--Aqui termina el navbar-->
+<!--Aqui comienza el formulario-->
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -221,6 +223,7 @@ body {
               </center>
               <!-- /.card-header -->
               <!-- Nombre, clave. -->
+              <center>
               <form action="" method="POST">
                 <div class="card-body">
                   <div class="form-group">
@@ -237,6 +240,7 @@ body {
                   </div>
                 </div>
                 <!-- /.card-body -->
+                </center>
                 <center>
                 <div class="card-footer">
                   <button style="color:white;" type="submit"  name="submit" class="btn btn-primary">Subir</button>
@@ -248,6 +252,8 @@ body {
 
         </body>
         </html>
+         <!--Aqui termina el formulario-->
+        <!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
 if(isset($_POST['submit'])){
   $name=$_POST['nombre'];
@@ -256,9 +262,10 @@ if(isset($_POST['submit'])){
   $consulta = "INSERT INTO materias(nombres,claves) VALUES ('$name','$clave')";
   $resultado = mysqli_query($conex,$consulta);
 if ($resultado) {
-echo"Guardado";
+echo"";
 } else {
 echo"No guardado";
 }
 }
 ?>   
+<!--Aqui termina la insercion de datos a la base-->

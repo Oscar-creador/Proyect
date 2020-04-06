@@ -1,4 +1,5 @@
 <?php 
+//recibo el parametro id del href del archivo lista alumnos para obtener cada campo de la base de datos de acuerdo a su id
 $id_categoria=$_GET['id'];
 require('bd_conect.php');
 $buscar=mysqli_query($conex,"SELECT*FROM alumnos WHERE id='$id_categoria'");
@@ -11,10 +12,12 @@ $telefonoalumno=$fila['telefonoalumno'];
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Aqui empieza el formulario para editar los campos -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Formulario editar Alumnos</title>
   <!-- Tell the browser to be responsive to screen width -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
