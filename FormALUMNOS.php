@@ -272,20 +272,23 @@ body {
         <!--Aqui termina el formulario-->
 <!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
-if(isset($_POST['submit'])){
-$matricula=$_POST['matricula'];    
-$nombrealumno=$_POST['nombrealumno'];
-$correoalumno=$_POST['correoalumno'];
-$telefonoalumno=$_POST['telefonoalumno'];
-//hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
-$consulta = "INSERT INTO alumnos(matricula,nombrealumno,correoalumno,telefonoalumno) VALUES ('$matricula',
-'$nombrealumno','$correoalumno','$telefonoalumno')";
-$resultado = mysqli_query($conex,$consulta);
-	if ($resultado) {
-	    echo "";
-	} else {
-	    echo "Error";
-	}
+if(isset($_POST['submit']))
+{
+    $matricula=$_POST['matricula'];    
+    $nombrealumno=$_POST['nombrealumno'];
+    $correoalumno=$_POST['correoalumno'];
+    $telefonoalumno=$_POST['telefonoalumno'];
+     //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
+    $consulta = "INSERT INTO alumnos(matricula,nombrealumno,correoalumno,telefonoalumno) VALUES ('$matricula',
+    '$nombrealumno','$correoalumno','$telefonoalumno')";
+    $resultado = mysqli_query($conex,$consulta);
+    if ($resultado) 
+    {
+	      echo "";
+    }else 
+    {
+	      echo "Error";
+	  }
 }
 ?>
 <!--Aqui termina la insercion de datos a la base-->

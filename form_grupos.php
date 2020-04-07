@@ -255,17 +255,18 @@ body {
         <!--Aqui termina el formulario-->
         <!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
   $name=$_POST['nombre'];
   $grupo=$_POST['numgpo'];
   //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
   $consulta = "INSERT INTO grupos(nombres,grupos) VALUES ('$name','$grupo')";
   $resultado = mysqli_query($conex,$consulta);
-if ($resultado) {
-echo"";
-} else {
-echo"No guardado";
-}
+  if ($resultado) {
+      echo"";
+  }else{
+      echo"No guardado";
+  }
 }
 ?>  
 <!--Aqui termina la insercion de datos a la base--> 

@@ -7,7 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<!--Aqui comienzan los estilos del index-->
+   <!--Aqui comienzan los estilos del index-->
 <body>
 <style>
 body {
@@ -28,10 +28,8 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: red;
 }
-
 </style> 
 <!--Aqui terminan los estilos del index-->
-
 <center> 
 <!--Aqui comienzan los cuadros e imagen alineados-->
 <h1> Control Escolar </h1>
@@ -48,7 +46,6 @@ a:hover, a:active {
 <a href="form_materias.php">Control de Materias<br> </a> 
 <br>
 <br>
-
 <a href="listaalumnos.php">Lista Alumnos <br> </a> 
 
 <a href="listacarreras.php">Lista Carreras<br> </a> 
@@ -58,11 +55,8 @@ a:hover, a:active {
 <a href="listagrupos.php">Listas Grupos<br> </a> 
 
 <a href="listamaterias.php">Listas de Materias<br> </a> 
-
 </center>
 <!--Aqui terminan los cuadros e imagen alineados-->
-
-
 </body>
 </html>
   

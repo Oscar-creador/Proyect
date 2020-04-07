@@ -8,9 +8,9 @@ require ('bd_conect.php');
   $id=$_POST['id_categoria'];
   $consulta = mysqli_query($conex,"UPDATE carreras SET nombres='$name',claves='$clave' WHERE id='$id'");
   if ($consulta) {
-  echo"Guardado";
-  header('location:listacarreras.php');
+      echo"Guardado";
+      header('location:listacarreras.php');
   } else {
-  echo"No guardado";
+      echo"No guardado";
   }
 ?>   

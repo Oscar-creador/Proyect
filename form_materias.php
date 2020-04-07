@@ -255,17 +255,20 @@ body {
          <!--Aqui termina el formulario-->
         <!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
-if(isset($_POST['submit'])){
-  $name=$_POST['nombre'];
-  $clave=$_POST['clave'];
-  //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
-  $consulta = "INSERT INTO materias(nombres,claves) VALUES ('$name','$clave')";
-  $resultado = mysqli_query($conex,$consulta);
-if ($resultado) {
-echo"";
-} else {
-echo"No guardado";
-}
+if(isset($_POST['submit']))
+{
+    $name=$_POST['nombre'];
+    $clave=$_POST['clave'];
+    //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
+    $consulta = "INSERT INTO materias(nombres,claves) VALUES ('$name','$clave')";
+    $resultado = mysqli_query($conex,$consulta);
+    if ($resultado) 
+    {
+        echo"";
+    }else
+    {
+        echo"No guardado";
+    }
 }
 ?>   
 <!--Aqui termina la insercion de datos a la base-->

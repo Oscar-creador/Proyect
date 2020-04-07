@@ -4,8 +4,8 @@ require('bd_conect.php');
 ?>
 <!--Encabezado y pregunta al usuario-->
 <center>
-<h3>Eliminar Usuario</h3><br>
-<font  color="white" face="Comic Sans MS,arial,arial">¿Estas seguro de querer eliminar? SI o NO</font>
+    <h3>Eliminar Usuario</h3><br>
+    <font  color="white" face="Comic Sans MS,arial,arial">¿Estas seguro de querer eliminar? SI o NO</font>
 </center>
 <br>
 <!--Aqui empiezan los estilos del form-->

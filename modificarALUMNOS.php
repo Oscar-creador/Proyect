@@ -11,9 +11,9 @@ $telefonoalumno=$_POST['telefonoalumno'];
 $consulta = mysqli_query($conex,"UPDATE alumnos SET matricula='$matricula', nombrealumno='$nombrealumno',correoalumno='$correoalumno',telefonoalumno='$telefonoalumno' 
 WHERE id='$id'");
   if ($consulta) {
-  echo"Guardado";
-  header('location:listaalumnos.php');
-  } else {
-  echo"No guardado";
+      echo"Guardado";
+      header('location:listaalumnos.php');
+  }else{
+      echo"No guardado";
   }
 ?>   

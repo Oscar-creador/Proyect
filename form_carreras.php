@@ -3,34 +3,24 @@ include("bd_conect.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Formulario carreras</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Font Awesome -->
-<link rel="stylesheet"href="../../plugins/fontawesome-free/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-  <link rel="stylesheet" href="AdminLTE.min.css">
-
-
-</head>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Formulario carreras</title>
+       <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!-- Font Awesome -->
+    <link rel="stylesheet"href="../../plugins/fontawesome-free/all.min.css">
+       <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+       <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+       <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="AdminLTE.min.css">
+    </head>
 <!--Aqui comienzan los estilos-->
-
 <style>
-<style>
-/*
- * Skin: Blue
- * ----------
- */
 body {
   background-image: url('fondo.jpg');
   background-attachment: fixed;
@@ -184,7 +174,6 @@ body {
 .skin-blue.layout-top-nav .main-header > .logo:hover {
   background: #3b8ab8;
 }
-
 </style>
 <!--Aqui terminan los estilos-->
 <!--Aqui comienza el navbar-->
@@ -206,7 +195,7 @@ body {
           </div>
         </nav>
         </header>
-        <!--Aqui termina el navbar-->
+<!--Aqui termina el navbar-->
 <!--Aqui comienza el formulario-->
     <!-- Main content -->
     <section class="content">
@@ -218,28 +207,26 @@ body {
             <div class="card card-primary">
               <div class="card-header">
               <center>
-              <h3 style="color:white;">Formulario Carreras</h3>
+                  <h3 style="color:white;">Formulario Carreras</h3>
               </center>
               </div>
-              <!-- /.card-header -->
-              <!-- Nombre, clave. -->
+               <!-- /.card-header -->
+               <!-- Nombre, clave. -->
               <center>
-              <form action="" method="POST">
-                <div class="card-body">
-                  <div class="form-group">
-                  <label style="color:white;">Nombre:</label>
+                  <form action="" method="POST">
+                    <div class="card-body">
+                   <div class="form-group">
+                    <label style="color:white;">Nombre:</label>
                     <input type="text" class="form-control" name="nombre">
-                  </div>
-                  <p></p>
-                  <div class="form-group">
-                  <label style="color:white;">Clave: </label>
+                    </div>
+                    <p></p>
+                    <div class="form-group">
+                    <label style="color:white;">Clave: </label>
                     <input type="number" class="form-control" name="clave">
-                  </div>
-                    
+                     </div> 
 				        </div>
                 <p></p>
-               
-                  </div>
+                </div>
                 </div>
                 <!-- /.card-body -->
                 </center>
@@ -248,26 +235,26 @@ body {
                   <button style="color:white;" type="submit"  name="submit" class="btn btn-primary">Subir</button>
                 </div>
                 </center>
-              </form>
-            </div>
+          </form>
+      </div>
             <!-- /.card -->
-
         </body>
         </html>
-        <!--Aqui termina el formulario-->
-        <!--Aqui comienza la insercion de datos a nuestra base-->
+<!--Aqui termina el formulario-->
+<!--Aqui comienza la insercion de datos a nuestra base-->
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['submit']))
+{
   $name=$_POST['nombre'];
   $clave=$_POST['clave'];
   //hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
   $consulta = "INSERT INTO carreras(nombres,claves) VALUES ('$name','$clave')";
   $resultado = mysqli_query($conex,$consulta);
-if ($resultado) {
-echo"";
-} else {
-echo"No guardado";
-}
+  if ($resultado) {
+      echo"";
+  }else{
+      echo"No guardado";
+  }
 }
 ?>   
 <!--Aqui termina la insercion de datos a la base--> 
