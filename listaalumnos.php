@@ -210,7 +210,7 @@ body {
         </nav>
         </header>
         <!--Aqui termina el navbar-->
-
+<!--Aqui comienza la tabla-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,8 +250,7 @@ body {
 }
  ?>
 </table>
-
+<!--Aqui termina la tabla-->
 </body>
-
 </html>
 

@@ -7,7 +7,7 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
+<!--Aqui comienzan los estilos del index-->
 <body>
 <style>
 body {
@@ -30,9 +30,10 @@ a:hover, a:active {
 }
 
 </style> 
+<!--Aqui terminan los estilos del index-->
 
 <center> 
-
+<!--Aqui comienzan los cuadros e imagen alineados-->
 <h1> Control Escolar </h1>
 <br>
 <br>
@@ -59,6 +60,7 @@ a:hover, a:active {
 <a href="listamaterias.php">Listas de Materias<br> </a> 
 
 </center>
+<!--Aqui terminan los cuadros e imagen alineados-->
 
 
 </body>

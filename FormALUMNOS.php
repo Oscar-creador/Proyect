@@ -277,6 +277,7 @@ $matricula=$_POST['matricula'];
 $nombrealumno=$_POST['nombrealumno'];
 $correoalumno=$_POST['correoalumno'];
 $telefonoalumno=$_POST['telefonoalumno'];
+//hace la consulta de insertar dentro de los campos de la tabla de la base de datos las variables del form
 $consulta = "INSERT INTO alumnos(matricula,nombrealumno,correoalumno,telefonoalumno) VALUES ('$matricula',
 '$nombrealumno','$correoalumno','$telefonoalumno')";
 $resultado = mysqli_query($conex,$consulta);

@@ -210,6 +210,7 @@ body {
         </header>
         <!--Aqui termina el navbar-->
 
+<!--Aqui comienza la tabla-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -244,7 +245,8 @@ body {
 	<?php 
 	}
 	 ?>
-	</table>
+  </table>
+  <!--Aqui termina la tabla-->
 </div>
 </body>
 </html>

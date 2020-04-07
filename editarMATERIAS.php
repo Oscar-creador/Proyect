@@ -1,4 +1,5 @@
 <?php
+//Aqui obtengo el parametro de la lista y consigo las variables de la tabla 
 $id_categoria=$_GET['id'];
 require 'bd_conect.php';
 $buscar=mysqli_query($conex,"SELECT*FROM materias WHERE id='$id_categoria'");
@@ -7,6 +8,7 @@ $nombres=$fila['nombres'];
 $claves=$fila['claves'];
 ?>
 <!DOCTYPE html>
+<!--Aqui conecto los estilos para el form-->
 <html>
 <head>
   <meta charset="utf-8">
@@ -25,9 +27,8 @@ $claves=$fila['claves'];
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
   <link rel="stylesheet" href="2AdminLTE.min.css">
-
-
 </head>
+<!--Aqui empieza el form con las variables que consegui al principio impresas en el value del input-->
 <body>
     <!-- Main content -->
     <section class="content">
@@ -42,6 +43,7 @@ $claves=$fila['claves'];
               </div>
               <!-- /.card-header -->
               <!-- Nombre, clave. -->
+              <!-- Esta informacion se envia despues del submit al action indicado. -->
               <form action="modificarMATERIAS.php" method="POST">
                 <div class="card-body">
                   <div class="form-group">
@@ -74,3 +76,4 @@ $claves=$fila['claves'];
             </div>
         </body>
         </html>
+<!--Aqui termina el form-->

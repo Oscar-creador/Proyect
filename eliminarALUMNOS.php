@@ -2,11 +2,13 @@
 $id=$_GET['id'];
 require('bd_conect.php');
 ?>
+<!--Encabezado y pregunta al usuario-->
 <center>
 <h3>Eliminar Usuario</h3><br>
 <font  color="white" face="Comic Sans MS,arial,arial">¿Estas seguro de querer eliminar? SI o NO</font>
 </center>
 <br>
+<!--Aqui empiezan los estilos del form-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +48,9 @@ require('bd_conect.php');
 		}
 
 	</style>
+	<!--Aqui terminan los estilos del form-->
 </head>
+<!--Aqui empieza el formulario-->
 <body>
 	<form action="" method="POST">
 		<input type="text"  name= "r" class="field"> <br/>
@@ -56,6 +60,8 @@ require('bd_conect.php');
 	</form>
 </body>
 </html> 
+<!--Aqui termina el formulario-->
+<!--Aqui compruebo la respuesta del form-->
 <?php
 if(isset($_POST['submit'])){
     $r=$_POST['r'];
@@ -63,8 +69,10 @@ if(isset($_POST['submit'])){
         header("location:listaalumnos.php");
     }
     if($r=="SI"){
+		//Aqui se hace la consulta para borrar
         $buscar=mysqli_query($conex,"DELETE FROM alumnos WHERE id='$id'");
         header("location:listaalumnos.php");
     }
 }
 ?>  
+<!--Aqui termina la comprobacion-->

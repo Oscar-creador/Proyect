@@ -1,5 +1,5 @@
 <?php 
-//recibo el parametro id del href del archivo lista alumnos para obtener cada campo de la base de datos de acuerdo a su id
+//Aqui obtengo el parametro de la lista y consigo las variables de la tabla 
 $id_categoria=$_GET['id'];
 require('bd_conect.php');
 $buscar=mysqli_query($conex,"SELECT*FROM alumnos WHERE id='$id_categoria'");
@@ -10,9 +10,9 @@ $correoalumno=$fila['correoalumno'];
 $telefonoalumno=$fila['telefonoalumno'];
 ?>
 <!DOCTYPE html>
+<!--Aqui conecto los estilos para el form-->
 <html>
 <head>
-  <!-- Aqui empieza el formulario para editar los campos -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Formulario editar Alumnos</title>
@@ -33,6 +33,7 @@ $telefonoalumno=$fila['telefonoalumno'];
 
 
 </head>
+<!--Aqui empieza el form con las variables que consegui al principio impresas en el value del input-->
 <body>
     <!-- Main content -->
     <section class="content">
@@ -47,6 +48,7 @@ $telefonoalumno=$fila['telefonoalumno'];
               </div>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
+              <!-- Esta informacion se envia despues del submit al action indicado. -->
               <form role="form" action="modificarALUMNOS.php" method="POST">
                 <div class="card-body">
                   <div class="form-group">
@@ -90,3 +92,4 @@ $telefonoalumno=$fila['telefonoalumno'];
 
         </body>
         </html>
+        <!--Aqui termina el form-->

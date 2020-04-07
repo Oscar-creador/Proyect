@@ -1,4 +1,5 @@
 <?php
+//Aqui obtengo el parametro de la lista y consigo las variables de la tabla 
 $id_categoria=$_GET['id'];
 require 'bd_conect.php';
 $buscar=mysqli_query($conex,"SELECT*FROM maestros WHERE id='$id_categoria'");
@@ -9,6 +10,7 @@ $correomaestro=$fila['correomaestro'];
 $telefonomaestro=$fila['telefonomaestro'];
 ?>
 <!DOCTYPE html>
+<!--Aqui conecto los estilos para el form-->
 <html>
 <head>
   <meta charset="utf-8">
@@ -30,6 +32,7 @@ $telefonomaestro=$fila['telefonomaestro'];
 
 
 </head>
+<!--Aqui empieza el form con las variables que consegui al principio impresas en el value del input-->
 <body>
     <!-- Main content -->
     <section class="content">
@@ -44,8 +47,8 @@ $telefonomaestro=$fila['telefonomaestro'];
               </div>
               <!-- /.card-header -->
               <!-- Matrícula, nombre, correo y teléfono. -->
-              <!---¡¡¡HAY QUE CHECAR BIEN PARA QUE SIRVE EL FORM ROLE EN ESTE ARCHIVO Y TODOS LOS DEMAS-->
-              <form role="form" action="modificarMESTROS.php" method="POST">
+               <!-- Esta informacion se envia despues del submit al action indicado. -->
+              <form role="form" action="modificarMAESTROS.php" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label >No. de Empleado: </label>
@@ -86,3 +89,4 @@ $telefonomaestro=$fila['telefonomaestro'];
             </div>
         </body>
         </html>
+        <!--Aqui termina el form-->
